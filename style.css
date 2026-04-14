@@ -1,0 +1,90 @@
+/* ============================================================
+   TEMA VISUAL PETROBRAS - SMART VISION
+   Cores Oficiais: Verde #008542 | Amarelo #FFD100
+   ============================================================ */
+
+/* 1. Configurações Base da Página */
+body {
+  background-color: #1a1a1a; /* Cinza Escuro Fundo */
+  color: #ffffff; /* Texto Branco default */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* 2. Animações (Keyframes) */
+
+/* Animação da Linha de Varredura (Scan) */
+@keyframes scanning {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Animação de Fade-in para o texto do terminal */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 3. Fundo Tecnológico (Overlay de Grade e Scan) */
+.tech-bg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 0; /* Fica atrás de tudo */
+  pointer-events: none; /* Não atrapalha cliques */
+  background-color: #1a1a1a;
+  
+  /* Cria a grade verde sutil */
+  background-image: 
+    linear-gradient(rgba(0, 133, 66, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 133, 66, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.8;
+}
+
+/* A linha de varredura verde */
+.tech-bg-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  /* Gradiente Verde Petrobras transparente */
+  background: linear-gradient(to bottom, transparent, rgba(0, 133, 66, 0.15), transparent);
+  animation: scanning 4s infinite linear;
+}
+
+/* 4. Estilos dos Cards da Arquitetura */
+
+/* Estado Normal do Card */
+.level-card {
+  background-color: #242424; /* Cinza Superfície */
+  border-top: 2px solid #008542; /* Borda Superior Verde */
+  transition: all 300ms ease-in-out;
+}
+
+/* Estado ATIVO do Card (Acionado pelo JavaScript) */
+/* Este é o efeito "Neon Amarelo" da Petrobras */
+.active-level {
+  border-color: #FFD100 !important; /* Muda borda para Amarelo */
+  box-shadow: 0 0 20px rgba(255, 209, 0, 0.4); /* Brilho Amarelo */
+  transform: translateY(-5px); /* Levanta o card */
+  background-color: #2d2d2d !important; /* Escurece levemente o fundo */
+}
+
+/* 5. Estilos Utilitários de Texto do Tema (Usados no Terminal JS) */
+
+.text-petrobras-green {
+  color: #008542;
+}
+
+.text-petrobras-yellow {
+  color: #FFD100;
+}
+
+/* Classe de animação para novos textos no terminal */
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}

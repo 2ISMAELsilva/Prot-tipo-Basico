@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrobras Smart Vision</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#1a1a1a] text-white font-sans relative overflow-x-hidden">
+
+  <div class="tech-bg-overlay"></div>
+
+  <main class="relative z-10">
+    
+    <nav class="border-b border-[#008542] bg-[#1a1a1a]/95 sticky top-0 z-50 backdrop-blur-sm px-6 py-4">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-[#008542] rounded-sm flex items-center justify-center font-bold text-[#FFD100]">P</div>
+          <span class="font-bold uppercase tracking-tighter">Smart<span class="text-[#008542]">Vision</span></span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+          <span class="text-[10px] font-bold text-[#008542] uppercase">Operador Ativo: 4402-X</span>
+        </div>
+      </div>
+    </nav>
+
+    <header class="py-20 px-6 max-w-6xl mx-auto border-b border-gray-800">
+      <h1 class="text-5xl md:text-6xl font-black leading-tight italic">
+        IA SEGURA NO <span class="text-[#FFD100]">CAMPO.</span>
+      </h1>
+      <p class="mt-4 text-gray-400 max-w-xl text-lg">
+        Entenda como protegemos o conhecimento técnico da companhia em operações offshore.
+      </p>
+      <div class="mt-8">
+        <button onclick="iniciarSimulacao()" class="bg-[#FFD100] text-black px-8 py-3 rounded font-black uppercase tracking-widest hover:bg-yellow-400 transition-all shadow-[0_0_15px_rgba(255,209,0,0.3)]">
+          Simular Fluxo de Requisição de IA
+        </button>
+      </div>
+    </header>
+
+    <section class="py-12 px-6 max-w-6xl mx-auto">
+      <div class="mb-10 border-l-4 border-[#008542] pl-6">
+        <h2 class="text-[#FFD100] text-sm font-bold uppercase tracking-widest">Análise de Tráfego</h2>
+        <h3 class="text-2xl font-bold mt-1">Como o dado viaja em milissegundos</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div id="level-1" class="level-card p-5 rounded">
+          <span class="text-[10px] font-mono text-[#008542] font-bold">NÍVEL 01</span>
+          <h4 class="font-bold mt-1">Dispositivo</h4>
+        </div>
+        <div id="level-2" class="level-card p-5 rounded">
+          <span class="text-[10px] font-mono text-[#008542] font-bold">NÍVEL 02</span>
+          <h4 class="font-bold mt-1">Identidade</h4>
+        </div>
+        <div id="level-3" class="level-card p-5 rounded">
+          <span class="text-[10px] font-mono text-[#008542] font-bold">NÍVEL 03</span>
+          <h4 class="font-bold mt-1">Gateway ZTNA</h4>
+        </div>
+        <div id="level-4" class="level-card p-5 rounded">
+          <span class="text-[10px] font-mono text-[#008542] font-bold">NÍVEL 04</span>
+          <h4 class="font-bold mt-1">IA Assistente</h4>
+        </div>
+        <div id="level-5" class="level-card p-5 rounded">
+          <span class="text-[10px] font-mono text-[#008542] font-bold">NÍVEL 05</span>
+          <h4 class="font-bold mt-1">Dados Seguros</h4>
+        </div>
+      </div>
+
+      <div class="mt-6 bg-black p-5 rounded border border-gray-800 font-mono text-sm h-auto min-h-[160px] flex flex-col justify-start transition-all">
+        <div class="flex items-center justify-between mb-3 border-b border-gray-800 pb-2">
+          <span class="text-xs text-gray-500">Terminal de Monitoramento // Processo Analítico</span>
+          <div class="flex space-x-1">
+            <div class="w-2 h-2 rounded-full bg-red-500"></div>
+            <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+            <div class="w-2 h-2 rounded-full bg-green-500"></div>
+          </div>
+        </div>
+        <div id="terminal-output" class="text-gray-400 leading-relaxed">
+          <span class="text-[#FFD100]">Sistema em stand-by. Aguardando inicialização de fluxo...</span>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    function iniciarSimulacao() {
+      const terminal = document.getElementById('terminal-output');
+      const niveis = [
+        document.getElementById('level-1'),
+        document.getElementById('level-2'),
+        document.getElementById('level-3'),
+        document.getElementById('level-4'),
+        document.getElementById('level-5')
+      ];
+
+      const passos = [
+        {
+          titulo: "[NÍVEL 01 - CHECK-IN DO HARDWARE]",
+          acao: "<span class='text-white'>Ação:</span> Validação do certificado digital único gravado fisicamente nos Smart Glasses.",
+          conceito: "<span class='text-white'>Por que importa:</span> Garante que o dispositivo é homologado pela Petrobras e que o sistema Android não foi violado."
+        },
+        {
+          titulo: "[NÍVEL 02 - IDENTIDADE MULTIFATOR (MFA)]",
+          acao: "<span class='text-white'>Ação:</span> O Azure AD cruza o PIN de voz do operador com sua biometria facial 3D.",
+          conceito: "<span class='text-white'>Por que importa:</span> Aplica o princípio Zero Trust. O sistema não confia na rede, apenas na identidade confirmada."
+        },
+        {
+          titulo: "[NÍVEL 03 - TÚNEL ZTNA (Gateway)]",
+          acao: "<span class='text-white'>Ação:</span> Encapsulamento da requisição através de um túnel TLS 1.3 blindado, ignorando a rede local.",
+          conceito: "<span class='text-white'>Por que importa:</span> Protege contra interceptação (Man-in-the-Middle) mesmo em redes Wi-Fi externas ou públicas."
+        },
+        {
+          titulo: "[NÍVEL 04 - FILTRO DE PREVENÇÃO (DLP + IA)]",
+          acao: "<span class='text-white'>Ação:</span> A IA processa a dúvida do operador, e o filtro examina os dados retornados.",
+          conceito: "<span class='text-white'>Por que importa:</span> Mascara informações restritas ao nível do usuário, como coordenadas sensíveis ou plantas inteiras."
+        },
+        {
+          titulo: "[NÍVEL 05 - DESCRIPTOGRAFIA EM MEMÓRIA]",
+          acao: "<span class='text-white'>Ação:</span> Os dados retornam dos servidores e são exibidos na tela dos óculos.",
+          conceito: "<span class='text-white'>Por que importa:</span> O dado nunca é salvo no óculos. Fica apenas na memória volátil, desaparecendo se o dispositivo for desligado."
+        }
+      ];
+
+      // Reset
+      niveis.forEach(el => el.classList.remove('active-level'));
+      terminal.innerHTML = "<span class='text-[#FFD100] animate-pulse'>Iniciando protocolo de segurança...</span>";
+
+      // Loop de animação
+      passos.forEach((passo, index) => {
+        setTimeout(() => {
+          niveis.forEach(el => el.classList.remove('active-level'));
+          niveis[index].classList.add('active-level');
+          
+          terminal.innerHTML = `
+            <div class="animate-fade-in">
+              <p class="text-[#008542] font-bold text-base mb-2">${passo.titulo}</p>
+              <p class="mb-1">${passo.acao}</p>
+              <p class="text-gray-400 italic">${passo.conceito}</p>
+            </div>
+          `;
+
+          // Fim do fluxo
+          if (index === passos.length - 1) {
+            setTimeout(() => {
+              niveis.forEach(el => el.classList.remove('active-level'));
+              terminal.innerHTML = `
+                <div class="text-[#008542] border border-[#008542] bg-[#008542]/10 p-3 rounded animate-fade-in">
+                  <p class="font-bold text-lg">✓ FLUXO CONCLUÍDO COM SUCESSO</p>
+                  <p class="text-sm mt-1 text-white">O operador recebeu as instruções da IA no Smart Glass de forma totalmente segura. Nenhum dado sensível foi exposto ou gravado localmente.</p>
+                </div>
+              `;
+            }, 4000);
+          }
+        }, (index + 1) * 3500);
+      });
+    }
+  </script>
+</body>
+</html>
