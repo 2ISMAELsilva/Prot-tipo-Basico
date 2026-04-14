@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petrobras Smart Vision - Arquitetura de IA</title>
+    <title>CYBERSENAI - Grand Prix</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -11,76 +11,147 @@
 </head>
 <body class="bg-[#1a1a1a] text-white font-sans relative overflow-x-hidden">
 
-  <div class="tech-bg-overlay"></div>
+  <div class="cyber-bg-overlay"></div>
 
   <main class="relative z-10">
-    <nav class="border-b border-[#008542] bg-[#1a1a1a]/95 sticky top-0 z-50 backdrop-blur-sm px-6 py-4">
+    
+    <nav class="border-b border-[#008542] bg-[#1a1a1a]/95 sticky top-0 z-50 backdrop-blur-md px-6 py-4">
       <div class="max-w-6xl mx-auto flex justify-between items-center">
-        <div class="flex items-center space-x-2">
-          <div class="w-8 h-8 bg-[#008542] rounded-sm flex items-center justify-center font-bold text-[#FFD100]">P</div>
-          <span class="font-bold uppercase tracking-tighter">Smart<span class="text-[#008542]">Vision</span></span>
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-[#008542] rounded flex items-center justify-center font-black text-[#FFD100] text-xl">S</div>
+          <span class="font-black text-2xl tracking-widest text-white">CYBER<span class="text-[#008542]">SENAI</span></span>
         </div>
-        <div class="flex items-center space-x-4">
-          <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-          <span class="text-[10px] font-bold text-[#008542] uppercase">Sistema Ativo: Operador 4402-X</span>
+        <div class="hidden md:flex space-x-6 text-sm font-bold text-gray-400">
+          <a href="#modulo1" class="hover:text-[#FFD100] transition-colors">01. Ameaças</a>
+          <a href="#modulo2" class="hover:text-[#FFD100] transition-colors">02. Ética</a>
+          <a href="#modulo3" class="hover:text-[#FFD100] transition-colors">03. Segurança</a>
         </div>
       </div>
     </nav>
 
-    <header class="py-20 px-6 max-w-6xl mx-auto border-b border-gray-800">
-      <h1 class="text-5xl md:text-6xl font-black leading-tight italic">
-        SEGURANÇA <span class="text-[#FFD100]">ZERO TRUST.</span>
+    <header class="py-20 px-6 max-w-6xl mx-auto text-center">
+      <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6">
+        CONSCIENTIZAÇÃO <span class="text-[#FFD100]">DIGITAL.</span>
       </h1>
-      <p class="mt-4 text-gray-400 max-w-xl text-lg">
-        Proteção de dados em tempo real para operações de campo com Smart Glasses.
+      <p class="text-gray-400 max-w-2xl mx-auto text-lg mb-10">
+        Projeto educacional desenvolvido para o Grand Prix de Inovação. Aprenda a se proteger no ambiente virtual e a agir com ética na tecnologia.
       </p>
-      <div class="mt-8">
-        <button onclick="iniciarSimulacao()" class="bg-[#FFD100] text-black px-8 py-3 rounded font-black uppercase tracking-widest hover:bg-yellow-400 transition-all shadow-[0_0_15px_rgba(255,209,0,0.3)]">
-          Ativar Simulação de Fluxo
-        </button>
-      </div>
     </header>
 
-    <section class="py-12 px-6 max-w-6xl mx-auto">
-      <div class="mb-10 border-l-4 border-[#008542] pl-6">
-        <h2 class="text-[#FFD100] text-sm font-bold uppercase tracking-widest">Protocolo Petrobras</h2>
-        <h3 class="text-2xl font-bold mt-1">Arquitetura de Segurança em 5 Níveis</h3>
+    <section id="modulo1" class="py-16 px-6 max-w-6xl mx-auto border-t border-[#008542]/50">
+      <div class="mb-12 border-l-4 border-[#008542] pl-6 text-left">
+        <h2 class="text-[#FFD100] text-sm font-bold uppercase tracking-widest">Módulo 01</h2>
+        <h3 class="text-3xl font-black mt-2 text-white">O que é CyberSegurança?</h3>
+        <p class="mt-4 text-gray-400 max-w-3xl">
+          Cybersegurança é o conjunto de práticas e tecnologias usadas para proteger dispositivos, sistemas e dados contra ataques digitais, como invasões, vírus e golpes online. Ela garante a segurança de informações pessoais e empresariais, evitando roubos, vazamentos e prejuízos, por meio de medidas como senhas fortes, antivírus e cuidados ao navegar na internet.
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-        <div id="level-1" class="level-card p-5 rounded">
-          <span class="text-[10px] font-mono text-[#008542] font-bold">NÍVEL 01</span>
-          <h4 class="font-bold mt-1">Dispositivo</h4>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="cyber-card p-6 rounded-lg cursor-pointer" onclick="mostrarDetalhe('phishing')">
+          <div class="text-[#FFD100] mb-4 font-bold text-xl">⚠️ Phishing</div>
+          <h4 class="font-bold text-lg mb-2">Ataque de Pesca</h4>
+          <p class="text-gray-400 text-sm">É um golpe em que criminosos criam e-mails, mensagens ou sites falsos que imitam empresas conhecidas (bancos, redes sociais, escolas) para enganar você. O objetivo é fazer você clicar em um link e informar seus dados, como senha ou cartão.
+Eles costumam usar mensagens urgentes tipo: “sua conta será bloqueada” ou “clique para confirmar agora”. Quando você percebe, já entregou suas informações..</p>
         </div>
-        <div id="level-2" class="level-card p-5 rounded">
-          <span class="text-[10px] font-mono text-[#008542] font-bold">NÍVEL 02</span>
-          <h4 class="font-bold mt-1">Identidade</h4>
-        </div>
-        <div id="level-3" class="level-card p-5 rounded">
-          <span class="text-[10px] font-mono text-[#008542] font-bold">NÍVEL 03</span>
-          <h4 class="font-bold mt-1">Gateway ZTNA</h4>
-        </div>
-        <div id="level-4" class="level-card p-5 rounded">
-          <span class="text-[10px] font-mono text-[#008542] font-bold">NÍVEL 04</span>
-          <h4 class="font-bold mt-1">IA Assistente</h4>
-        </div>
-        <div id="level-5" class="level-card p-5 rounded">
-          <span class="text-[10px] font-mono text-[#008542] font-bold">NÍVEL 05</span>
-          <h4 class="font-bold mt-1">Dados Seguros</h4>
-        </div>
-      </div>
+        <div class="cyber-card p-6 rounded-lg cursor-pointer" onclick="mostrarDetalhe('malware')">
+          <div class="text-[#FFD100] mb-4 font-bold text-xl">🦠 Malware</div>
+          <h4 class="font-bold text-lg mb-2">Software Malicioso</h4>
+          <p class="text-gray-400 text-sm">É qualquer programa criado para invadir, danificar ou espionar seu dispositivo sem você perceber. Ele pode entrar através de downloads suspeitos, sites inseguros ou até pendrives.
+Existem vários tipos:
 
-      <div class="mt-8 bg-black p-6 rounded border border-gray-800 font-mono text-sm min-h-[180px]">
-        <div class="flex items-center space-x-2 mb-4">
-          <div class="w-2 h-2 rounded-full bg-green-500"></div>
-          <span class="text-xs text-gray-600 uppercase">Análise de Processo em Tempo Real</span>
+Vírus que bagunçam o sistema
+Spyware que espiona suas informações
+Trojans que se disfarçam de programas normais.</p>
         </div>
-        <div id="terminal-output" class="text-gray-400 leading-relaxed">
-          <span class="text-[#FFD100]">Aguardando comando de ativação...</span>
+        <div class="cyber-card p-6 rounded-lg cursor-pointer" onclick="mostrarDetalhe('ransomware')">
+          <div class="text-[#FFD100] mb-4 font-bold text-xl">🔒 Ransomware</div>
+          <h4 class="font-bold text-lg mb-2">Sequestro de Dados</h4>
+          <p class="text-gray-400 text-sm">É um tipo específico de malware que bloqueia seus arquivos ou todo o sistema. Depois disso, o criminoso exige um pagamento (resgate) para liberar o acesso.
+Normalmente, a vítima vê uma mensagem dizendo que seus dados foram criptografados e só serão liberados após pagamento. Mesmo pagando, não há garantia de recuperar os arquivos..</p>
         </div>
       </div>
     </section>
+
+    <section id="modulo2" class="py-16 px-6 max-w-6xl mx-auto border-t border-[#008542]/50">
+      <div class="mb-12 border-l-4 border-[#008542] pl-6 text-left">
+        <h2 class="text-[#FFD100] text-sm font-bold uppercase tracking-widest">Módulo 02</h2>
+        <h3 class="text-3xl font-black mt-2 text-white">Ética na Tecnologia</h3>
+        <p class="mt-4 text-gray-400">Ética na tecnologia é o conjunto de princípios e valores que orientam o uso responsável e correto das tecnologias, garantindo que elas sejam usadas de forma justa, segura e respeitando as pessoas. Ela envolve questões como privacidade de dados, uso consciente da internet, combate à desinformação e respeito às leis e aos direitos dos usuários, buscando evitar prejuízos e impactos negativos na sociedade..</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-[#242424] rounded-xl overflow-hidden border border-gray-800">
+          <div class="bg-[#1a1a1a] py-3 px-5 border-b border-gray-800 font-bold uppercase tracking-wider text-sm text-[#008542]">Tema: Privacidade</div>
+          <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-[#008542]/10 border border-[#008542]/30 p-4 rounded">
+              <span class="inline-block bg-[#008542] text-white text-[10px] font-bold px-2 py-1 rounded mb-2 uppercase">Atitude Correta ✓</span>
+              <p class="text-sm text-gray-300">Respeitar dispositivos alheios e não ler mensagens de colegas.</p>
+            </div>
+            <div class="bg-red-900/20 border border-red-800/50 p-4 rounded">
+              <span class="inline-block bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded mb-2 uppercase">Atitude Incorreta ✗</span>
+              <p class="text-sm text-gray-300">"Hackear" redes sociais de amigos por brincadeira.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-[#242424] rounded-xl overflow-hidden border border-gray-800">
+          <div class="bg-[#1a1a1a] py-3 px-5 border-b border-gray-800 font-bold uppercase tracking-wider text-sm text-[#008542]">Tema: Informação</div>
+          <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-[#008542]/10 border border-[#008542]/30 p-4 rounded">
+              <span class="inline-block bg-[#008542] text-white text-[10px] font-bold px-2 py-1 rounded mb-2 uppercase">Atitude Correta ✓</span>
+              <p class="text-sm text-gray-300">Checar a fonte da notícia (fact-checking) antes de repassar.</p>
+            </div>
+            <div class="bg-red-900/20 border border-red-800/50 p-4 rounded">
+              <span class="inline-block bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded mb-2 uppercase">Atitude Incorreta ✗</span>
+              <p class="text-sm text-gray-300">Criar e espalhar Fake News ou áudios alarmistas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modulo3" class="py-16 px-6 max-w-6xl mx-auto border-t border-[#008542]/50">
+      <div class="mb-12 text-center">
+        <h2 class="text-[#FFD100] text-sm font-bold uppercase tracking-widest">Módulo 03</h2>
+        <h3 class="text-3xl font-black mt-2 text-white">Práticas de Defesa</h3>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <div class="bg-[#242424] border border-[#008542]/50 p-5 rounded-lg w-full md:w-[48%] flex items-start space-x-4">
+          <div class="bg-[#008542] text-white p-3 rounded-full font-black text-xl">1</div>
+          <div>
+            <h4 class="font-bold text-lg text-[#FFD100]">Senhas Fortes & MFA</h4>
+            <p class="text-gray-400 text-sm mt-1">Use senhas com no mínimo 12 caracteres, misturando letras maiúsculas, minúsculas, números e símbolos (ex: G7@kL9!pQ2#x). Evite informações óbvias como nome, data de nascimento ou “123456”. Além disso, ative a Autenticação de Múltiplos Fatores (MFA), que adiciona uma segunda camada de segurança — como um código enviado para seu celular ou gerado por aplicativo — dificultando o acesso mesmo que alguém descubra sua senha.</p>
+          </div>
+        </div>
+        <div class="bg-[#242424] border border-[#008542]/50 p-5 rounded-lg w-full md:w-[48%] flex items-start space-x-4">
+          <div class="bg-[#008542] text-white p-3 rounded-full font-black text-xl">2</div>
+          <div>
+            <h4 class="font-bold text-lg text-[#FFD100]">Desconfiança Inteligente</h4>
+            <p class="text-gray-400 text-sm mt-1">Nunca compartilhe suas senhas ou códigos de verificação. Instituições sérias, como o SENAI, não pedem esse tipo de informação por WhatsApp, e-mail ou mensagem. Sempre desconfie de links suspeitos, principalmente aqueles que prometem prêmios, urgência ou pedem dados pessoais. Se tiver dúvida, não clique e procure confirmar a informação pelos canais oficiais..</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <footer class="bg-black border-t border-[#008542] py-12 relative z-10 text-center px-6">
+    <div class="max-w-4xl mx-auto flex flex-col items-center">
+      <div class="w-12 h-12 bg-[#008542] rounded flex items-center justify-center font-black text-[#FFD100] text-2xl mb-6">S</div>
+      <h2 class="text-2xl font-black tracking-widest text-white mb-2">CYBER<span class="text-[#008542]">SENAI</span></h2>
+      <p class="text-gray-400 italic mb-8 max-w-lg">
+        "Projeto educacional Grand Prix com o objetivo de conscientizar sobre cyber segurança e ética digital."
+      </p>
+      
+      <div class="border border-gray-800 bg-[#1a1a1a] p-4 rounded w-full max-w-md">
+        <h4 class="text-[#FFD100] font-bold uppercase tracking-widest text-xs mb-2">Desenvolvido por:</h4>
+        <p class="text-white font-mono text-sm">Alunos SENAI</p>
+        <p class="text-gray-500 font-mono text-xs mt-1">Turma de Tecnologia - Projeto Grand Prix</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
